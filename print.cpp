@@ -1,5 +1,6 @@
 #include "print.h"
+using namespace std;
 void print(void){
-	printf("Hello China!\n");
+	cout<<"Hello World"<<endl;
 	return;
 }
