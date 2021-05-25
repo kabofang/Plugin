@@ -10,8 +10,8 @@ typedef void (*TP_PRINT)(void);
 typedef int (*TP_GETID)(void);
 typedef string (*TP_GETFUNCTION)(void);
 void useage(void){
-	cout<<"useage:command option"<<endl;
-	cout<<"      command ID [ID]..."<<endl;
+	cout<<"useage:command help"<<endl;
+	cout<<"       command ID [ID]..."<<endl;
 }
 int main(int argc,char **argv){
 	if(argc < 2){	
@@ -61,8 +61,8 @@ int main(int argc,char **argv){
 	closedir(pDir);
 
 	if(!strcmp(argv[1],"help")){
-		map<int,string>::reverse_iterator it;
-     		for(it = Map_function.rbegin(); it != Map_function.rend(); it++)
+		map<int,string>::iterator it;
+    		for(it = Map_function.begin();it != Map_function.end();it++)
          		 cout<<"ID: "<<it->first<<"\tfunction: "<<it->second<<endl;
 		return 0;
 	}
